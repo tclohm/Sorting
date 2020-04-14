@@ -31,13 +31,13 @@ def binary_search(arr, target):
       return middle
   return -1
 
-print(binary_search(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 'eggplant', 'meat', 'orange', 'yogurt', 'zeta'], 'zeta'))
+#print(binary_search(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 'eggplant', 'meat', 'orange', 'yogurt', 'zeta'], 'bananas'))
 # STRETCH: write a recursive implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
   if low == high:
     return low
   middle = (low+high)//2
-
+  print("recursive high:", high, "low:", low, "middle:", middle)
   if len(arr) == 0:
     return -1 # array empty
   # TO-DO: add missing if/else statements, recursive calls
@@ -47,3 +47,6 @@ def binary_search_recursive(arr, target, low, high):
     return binary_search_recursive(arr, target, low, middle - 1)
   else:
     return binary_search_recursive(arr, target, middle + 1, high)
+
+
+#print(binary_search_recursive(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 'eggplant', 'meat', 'orange', 'yogurt', 'zeta'], 'bananas', 0, 10))
