@@ -1,14 +1,15 @@
 # STRETCH: implement Linear Search				
 def linear_search(arr, target):
-  head = 0
   # TO-DO: add missing code
-  if arr[0] == target:
-    return 0
-  elif arr[0] == len(arr)-1:
+  if len(arr) == 0:
     return -1
-  else:
-    return linear_search(arr[head+1:], target)
+  for index in range(0, len(arr)):
+    if arr[index] == target:
+      return index
+  return -1
+    
 
+print(linear_search([-2, 7, 3, -9, 5, 1, 0, 4, -6], -6))
 
 # STRETCH: write an iterative implementation of Binary Search
 def binary_search(arr, target):
@@ -34,7 +35,7 @@ print(binary_search(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 
 # STRETCH: write a recursive implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
   if low == high:
-    return lower
+    return low
   middle = (low+high)//2
 
   if len(arr) == 0:
