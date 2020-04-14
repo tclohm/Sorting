@@ -13,20 +13,40 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-    # 1. Loop through your array
-    # - Compare each element to its neighbor
-    # - If elements in wrong position (relative to each other, swap them)
-    # 2. If no swaps performed, stop. Else, go back to the element at index 0 and repeat step 1.
-    index = 0
-    while index < len(arr):
-        idx = 0
-        while idx < len(arr)-1:
-            if arr[idx] > arr[idx + 1]:
-                arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
-            idx += 1
-        index += 1
+    # step through our list, this is our big container
+        # step through the list again, for iteration through or big container
+            # switch if the arr[n] is greater than arr[n + 1]
+            # move forward
+        # once our iterations are done, move to the next row to check if everything is
+    # index = 0
+    # while index < len(arr):
+    #     idx = 0
+    #     swap = False
+    #     while idx < len(arr)-1:
+    #         if arr[idx] > arr[idx + 1]:
+    #             arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
+    #             swap = True
+    #             print("swap")
+    #         idx += 1
+    #         print(arr)
+    #     index += 1
+
+    #     if swap == False:
+    #         print("break!")
+    #         return arr
+    rotation = 0
+    for row in range(0, len(arr)-1):
+        print("row", row)
+        print("arr-1-row", len(arr) - 1 - row)
+        for column in range(0, len(arr) - 1 - row):
+            if arr[column] > arr[column + 1]:
+                arr[column], arr[column +1] = arr[column + 1], arr[column]
+            rotation += 1
+            print(rotation)
     return arr
 
+
+print(bubble_sort([1, 9, 2, 3, 4, 9, 32, 44, 0]))
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
 
