@@ -28,8 +28,9 @@ def binary_search(arr, target):
       high = middle - 1
     if arr[middle] == target:
       return middle
+  return -1
 
-print(binary_search(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 'eggplant', 'meat', 'orange', 'yogurt', 'zeta'], 'meat'))
+print(binary_search(['apples', 'bananas', 'bread', 'chicken', 'coffee', 'dill', 'eggplant', 'meat', 'orange', 'yogurt', 'zeta'], 'zeta'))
 # STRETCH: write a recursive implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
   if low == high:
