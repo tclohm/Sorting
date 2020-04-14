@@ -37,16 +37,16 @@ def bubble_sort( arr ):
     rotation = 0
     for row in range(0, len(arr)-1):
         print("row", row)
-        print("arr-1-row", len(arr) - 1 - row)
+        print(f"arr:{len(arr)-1} - 1 - row:{row} = ", len(arr) - 1 - row)
         for column in range(0, len(arr) - 1 - row):
             if arr[column] > arr[column + 1]:
                 arr[column], arr[column +1] = arr[column + 1], arr[column]
             rotation += 1
-            print(rotation)
+            print("rotate:", rotation)
     return arr
 
 
-print(bubble_sort([1, 9, 2, 3, 4, 9, 32, 44, 0]))
+print(bubble_sort([1, 2, 3, 5, 4, 9, 11, 10, 16, 15, 14, 32, 44, 0]))
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
 
