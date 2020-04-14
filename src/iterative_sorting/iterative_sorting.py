@@ -49,5 +49,10 @@ def bubble_sort( arr ):
 print(bubble_sort([1, 2, 3, 5, 4, 9, 11, 10, 16, 15, 14, 32, 44, 0]))
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
+    """
+        if there are 17 elements less than x, x belongs in position 18
+    """
+    
+
 
     return arr
