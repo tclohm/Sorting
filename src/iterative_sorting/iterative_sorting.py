@@ -1,5 +1,13 @@
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
+    # 1. find min element
+        # swap it with index 0
+    # iterative step
+        # sublist, extract minimum element
+        # swap it with the element at index 1, 2, 3, ..., n
+    # keep the left portion of the list sorted
+        # at the nth step, first elements in list are sorted
+        # all other elements are bigger than first n elements 
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         cur_index = i
@@ -35,6 +43,7 @@ def bubble_sort( arr ):
     #         print("break!")
     #         return arr
     rotation = 0
+    # change to while loop and flag if no swap occurs
     for row in range(0, len(arr)-1):
         print("row", row)
         print(f"arr:{len(arr)-1} - 1 - row:{row} = ", len(arr) - 1 - row)
@@ -46,13 +55,17 @@ def bubble_sort( arr ):
     return arr
 
 
-print(bubble_sort([1, 2, 3, 5, 4, 9, 11, 10, 16, 15, 14, 32, 44, 0]))
+#print(bubble_sort([1, 2, 3, 5, 4, 9, 11, 10, 16, 15, 14, 32, 44, 0]))
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
     """
-        if there are 17 elements less than x, x belongs in position 18
+        iterate through the input, count the number of times each item occurs
+        using the counts, compute an item's index in the final list
+        ex: [1, 1, 3, 2, 1],
+            [0, 0, 0, 0, 0]
+         pos[0, 1, 2, 3, 4]
+            [0, 3, 1, 1, 0]
     """
-    
-
-
     return arr
+
+count_sort([5, 1, 2, 4, 5, 3, 3, 3], 7)
